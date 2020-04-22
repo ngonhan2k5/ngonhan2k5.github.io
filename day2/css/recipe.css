@@ -32,3 +32,10 @@ footer pre {
     text-align: right;
     font-family: monospace;
 }
+
+
+section#comments p {
+    background-color:#FFFFA8;
+    font-style: italic;
+    margin: 5px 30px;
+}
