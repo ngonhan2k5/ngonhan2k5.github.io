@@ -36,7 +36,7 @@ main{
 }
 
 nav, section {
-    margin: 0px 0px 10px;
+    margin: 0px 0px 15px;
     padding: 10px 20px;
     background-color: rgb(22, 21, 18);
     border-radius: 5px;  
@@ -46,13 +46,13 @@ nav {
     text-transform: uppercase;
 }
 header {
-    margin: 0px 0px 10px;
+    margin: 0px 0px 15px;
+    padding-bottom: 10px;
 }
 header, footer {
     border: 4px groove rgb(16, 146, 22) ;
     border-radius: 5px;
     text-align: center;
-
 }
 
 #menu {
@@ -63,7 +63,6 @@ footer {
     padding: 10px 0 5px;
     vertical-align: text-top;
     line-height: 40px;
-    
 }
 
 
@@ -89,7 +88,6 @@ h3 {
 }
 
 #movies ul li span{
-    /* line-height: 10px; */
     vertical-align: -webkit-baseline-middle;
     padding: 3px 5px;
 }
@@ -100,4 +98,25 @@ h3 {
 
 #mood ul li img{
     width: 400px;
+}
+
+.typing {
+    animation: fly-in 6s steps(25, end), typing 1s infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid green;
+    /* width: ; */
+}
+
+@keyframes fly-in {
+    0% {width:0}
+    25% {width:60%}
+    45% {width:40%}
+    65% {width:40%}
+    100% {width:100%}
+}
+
+@keyframes typing {
+    0%, 100% {border-color:transparent }
+    50% {border-color: green}
 }
