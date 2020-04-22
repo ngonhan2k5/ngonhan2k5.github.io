@@ -111,8 +111,8 @@ h3 {
 @keyframes fly-in {
     0% {width:0}
     25% {width:60%}
-    45% {width:40%}
-    65% {width:40%}
+    45% {width:39%}
+    65% {width:39%}
     100% {width:100%}
 }
 
