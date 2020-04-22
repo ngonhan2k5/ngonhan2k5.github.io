@@ -69,18 +69,30 @@ footer {
 
 li, a, a:visited {
     color: rgb(33, 101, 179);
+    text-decoration: none;
 }
 
-header h4 b {
-    color:rgb(180, 180, 9);
-    
-}
-
-h3 {
+a:hover {
     text-decoration: underline;
 }
 
+header p b {
+    color:rgb(180, 180, 9);
+}
+header p {
+    font-size: 1.2em;
+}
 
+h3 {
+    text-decoration: overline wavy;
+}
+
+p:first-child:first-letter, h3:first-child:first-letter {
+    color: rgb(0, 84, 153); 
+    font-size: 2em;
+    font-weight: 900;
+    initial-letter: 14;
+  }
 
 #movies ul {
     list-style-type: decimal-leading-zero;
@@ -101,7 +113,7 @@ h3 {
 }
 
 .typing {
-    animation: fly-in 6s steps(25, end), typing 1s infinite;
+    animation: fly-in 6s steps(25, end) 2, typing 1s infinite;
     overflow: hidden;
     white-space: nowrap;
     border-right: 2px solid green;
