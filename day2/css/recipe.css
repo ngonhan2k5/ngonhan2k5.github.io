@@ -20,3 +20,15 @@ h1{
 a {
     color: #A4A400;
 }
+
+#one ol {
+    list-style: none;
+    border: 0;
+    padding: 0;
+}
+
+footer pre {
+    width: 300px;
+    text-align: right;
+    font-family: monospace;
+}
