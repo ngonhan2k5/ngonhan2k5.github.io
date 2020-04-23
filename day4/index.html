@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W1D4 - Lab - Le Chi Nhan Ngo</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section id="login">
+        <form >
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+            <!-- password -->
+            <div class="form-group">
+                <label for="pass">Password</label>
+                <input type="text" class="form-control" id="pass" pattern="(?=.*\d+.*)(?=.*[a-z]+.*)(?=.*[A-Z]+.*).{10,}" aria-describedby="passHelp" required>
+                <small id="passHelp" class="form-text text-muted">Password is at least 10 characters in length and contain at least one number and one uppercase and lowercase letter</small>
+            </div>
+            <!-- url -->
+            <div class="form-group">
+                <label for="pass">Homepage</label>
+                <input type="text" class="form-control" id="pass" pattern="https*://" aria-describedby="urlHelp" required>
+                <small id="passHelp" class="form-text text-muted">You homepage url, must start with http:// or https://</small>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="check">
+                <label class="form-check-label" for="check">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+</body>
+
+</html>
