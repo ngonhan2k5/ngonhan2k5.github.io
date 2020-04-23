@@ -24,6 +24,12 @@ h1 {
     text-shadow: 3px 3px #999999;
 }
 
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+
 main {
     /* box-sizing: border-box; */
     border-radius: 20px;
@@ -61,11 +67,7 @@ section, div.rotten {
     width: 550px;
 }
 
-section {
-    
-    
-    
-}
+
 
 section #rotten {
     color: red;
