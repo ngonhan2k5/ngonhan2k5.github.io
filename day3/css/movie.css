@@ -55,7 +55,10 @@ aside dl {
 
 aside dt {
     font-weight: bolder;
-    margin-top: 10pt;
+}
+
+aside dd {
+    margin-bottom: 10pt;
 }
 
 aside ul {
