@@ -1,3 +1,18 @@
-section#login {
+section#login, section#product {
     margin: 50px;
+}
+
+/* .form-row>.col, .form-row>[class*=col-] {
+    padding-left: 15px;
+    padding-right: 15px;
+} */
+
+section {
+    /* width: 60%;
+    margin: auto; */
+}
+
+body {
+    width: 90%;
+    margin: auto;
 }
