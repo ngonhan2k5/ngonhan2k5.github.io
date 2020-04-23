@@ -9,102 +9,125 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
 
 </head>
 
 <body>
+    <header>
+        <h1>W1D4 - Coding HTML Forms and Applying RegEx for</h1>
+    </header>
+    <main>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab"
+                    aria-controls="login" aria-selected="true">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="product-tab" data-toggle="tab" href="#product" role="tab"
+                    aria-controls="product" aria-selected="false">Product</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <section class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                <h2>Login</h2>
+                <br>
+                <form name="login">
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" placeholder="Enter email" class="form-control" id="email"
+                            aria-describedby="emailHelp" required>
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                    <!-- password -->
+                    <div class="form-group">
+                        <label for="pass">Password</label>
+                        <input type="password" placeholder="Password" class="form-control" id="pass"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" aria-describedby="passHelp" required>
+                        <small id="passHelp" class="form-text text-muted">Password is at least 10 characters in length
+                            and contain at least one number and one uppercase and lowercase letter</small>
+                    </div>
+                    <!-- url -->
+                    <div class="form-group">
+                        <label for="homepage">Homepage</label>
+                        <input type="text" class="form-control" id="homepage" placeholder="Homepage" pattern="https*://"
+                            aria-describedby="urlHelp" required>
+                        <small id="passHelp" class="form-text text-muted">You homepage url, must start with http:// or
+                            https://</small>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="check">
+                        <label class="form-check-label" for="check">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </section>
+            <!-- Product -->
+            <section class="tab-pane fade" id="product" role="tabpanel" aria-labelledby="product-tab">
+                <h2>New Product Form</h2>
+                <br>
+                <form name="product">
+                    <div class="form-row">
+                        <div class="form-group col-md-6 pr-3">
+                            <label for="prod_pronum">Product Number</label>
+                            <input type="text" class="form-control" id="prod_pronum" pattern="\d*" required>
+                        </div>
+                        <div class="form-group col-md-6 pl-3">
+                            <label for="prod_quantity">Quantity</label>
+                            <input type="number" class="form-control" id="prod_quantity" value="0" required>
+                        </div>
+                    </div>
 
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item">
-          <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="product-tab" data-toggle="tab" href="#product" role="tab" aria-controls="product" aria-selected="false">Product</a>
-        </li>
-      </ul>
-      <div class="tab-content" id="myTabContent">
-        <section class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-            <h2>Login</h2>
-            <br>
-            <form name="login">
-                <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" placeholder="Enter email" class="form-control" id="email" aria-describedby="emailHelp" required>
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                        else.</small>
-                </div>
-                <!-- password -->
-                <div class="form-group">
-                    <label for="pass">Password</label>
-                    <input type="password" placeholder="Password" class="form-control" id="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}" aria-describedby="passHelp" required>
-                    <small id="passHelp" class="form-text text-muted">Password is at least 10 characters in length and contain at least one number and one uppercase and lowercase letter</small>
-                </div>
-                <!-- url -->
-                <div class="form-group">
-                    <label for="homepage">Homepage</label>
-                    <input type="text" class="form-control" id="homepage" placeholder="Homepage"  pattern="https*://" aria-describedby="urlHelp" required>
-                    <small id="passHelp" class="form-text text-muted">You homepage url, must start with http:// or https://</small>
-                </div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="check">
-                    <label class="form-check-label" for="check">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </section>
-        <!-- Product -->
-        <section class="tab-pane fade" id="product" role="tabpanel" aria-labelledby="product-tab">
-            <h2>New Product Form</h2>
-            <br>
-            <form name="product">
-                <div class="form-row">
-                    <div class="form-group col-md-6 pr-3">
-                        <label for="prod_pronum">Product Number</label>
-                        <input type="text" class="form-control" id="prod_pronum" pattern="\d*" required>
+                    <div class="form-row">
+                        <div class="form-group col-md-6 pr-3">
+                            <label for="prod_name">Name</label>
+                            <input type="text" class="form-control" id="prod_name">
+                        </div>
+                        <div class="form-group col-md-6 pl-3">
+                            <label for="prod_supplier">Supplier:</label>
+                            <select class="form-control" id="prod_supplier">
+                                <option>Select a supplier</option>
+                                <option valuse="1">Sup 1</option>
+                                <option valuse="2">Sup 2</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group col-md-6 pl-3">
-                        <label for="prod_quantity">Quantity</label>
-                        <input type="number" class="form-control" id="prod_quantity" value="0" required>
-                    </div>
-                </div>
 
-                <div class="form-row">
-                    <div class="form-group col-md-6 pr-3">
-                        <label for="prod_name">Name</label>
-                        <input type="text" class="form-control" id="prod_name">
+                    <div class="form-row">
+                        <div class="form-group col-md-6 pr-3">
+                            <label for="unit_price">Unit Price</label>
+                            <input type="number" class="form-control" id="unit_price" step=".1" value="0.0" required>
+                        </div>
+                        <div class="form-group col-md-6 pl-3">
+                            <label for="date_sup">Date supplier</label>
+                            <input type="text" class="form-control" id="date_sup" placeholder="yyyy-mm-dd"
+                                pattern="\d{4}-\d{2}-\d{2}" aria-describedby="dateHelp" required>
+                            <small id="dateHelp" class="form-text text-muted">Enter a valid Date</small>
+                        </div>
                     </div>
-                    <div class="form-group col-md-6 pl-3">
-                        <label for="prod_supplier">Supplier:</label>
-                        <select class="form-control" id="prod_supplier" >
-                            <option >Select a supplier</option>
-                            <option valuse="1">Sup 1</option>
-                            <option valuse="2">Sup 2</option>
-                        </select>
+                    <div class="btn-group float-right" role="group" aria-label="Basic example">
+                        <button type="reset" class="btn btn-outline-secondary mr-4">Reset</button>&nbsp;&nbsp;&nbsp;
+                        <button type="button" class="btn btn-outline-danger mr-4">Cancel</button>&nbsp;&nbsp;&nbsp;
+                        <button type="submit" class="btn btn-outline-primary">Add Product</button>
                     </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-6 pr-3">
-                        <label for="unit_price">Unit Price</label>
-                        <input type="number" class="form-control" id="unit_price" step=".1" value="0.0" required>
-                    </div>
-                    <div class="form-group col-md-6 pl-3">
-                        <label for="date_sup">Date supplier</label>
-                        <input type="text" class="form-control" id="date_sup" placeholder="yyyy-mm-dd"  pattern="\d{4}-\d{2}-\d{2}" aria-describedby="dateHelp" required>
-                        <small id="dateHelp" class="form-text text-muted">Enter a valid Date</small>
-                    </div>
-                </div>
-                <div class="btn-group float-right" role="group" aria-label="Basic example">
-                    <button type="reset" class="btn btn-outline-secondary mr-4">Reset</button>&nbsp;&nbsp;&nbsp;
-                    <button type="button" class="btn btn-outline-danger mr-4">Cancel</button>&nbsp;&nbsp;&nbsp;
-                    <button type="submit" class="btn btn-outline-primary">Add Product</button>
-                </div>
-            </form>
-        </section>
-            
+                </form>
+            </section>
+    </main>
+    <footer>
+        <div id="validator">
+            <a target="_blank" href="https://validator.w3.org/check/referer"><img src="img/w3c-html.png"
+                    alt="Valid HTML5" /></a> <br />
+            <a target="_blank" href="https://jigsaw.w3.org/css-validator/check/referer"><img src="img/w3c-css.png"
+                    alt="Valid CSS" /></a>
+        </div>
+    </footer>
 </body>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 
 </html>
