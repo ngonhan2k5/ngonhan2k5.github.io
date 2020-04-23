@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/background.png");
+    font-size:8pt;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+header div {
+    
+    background: url("../img/bannerbg.png") repeat;
+}
+
+header div>div {
+    width: 800px;
+    margin: auto;
+    
+}
+
+h1 {
+    text-align: center;
+    font-size: 24pt;
+    font-weight: bold;
+    font-family: Tahoma, Verdana, sans-serif;
+    text-shadow: 3px 3px #999999;
+}
+
+main {
+    /* box-sizing: border-box; */
+    border-radius: 20px;
+    border: 4px solid gray;
+    width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+aside {
+    float: right;
+    width: 250px;
+    background-color: #A2B964;
+}
+
+aside dl {
+    padding: 10pt;
+    font-size: 8pt;
+    font-family: Arial, sans-serif;
+}
+
+aside dt {
+    font-weight: bolder;
+    margin-top: 10pt;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+section, div.rotten {
+    width: 550px;
+}
+
+section {
+    
+    
+    
+}
+
+section #rotten {
+    color: red;
+    font-size: 48pt;
+    font-weight: bold;
+    height: 83px;
+    line-height: 83px;
+    overflow: hidden;
+}
+section #rotten div:first-child {
+    float: left;
+}
+
+section #rotten div{
+    background: url("../img/rbg.png");
+    height: 83px;
+}
+
+#left_col,#right_col {
+    float: left;
+    width: 47%;
+}
+
+#left_col {    
+    margin: 0 2%;
+}
+
+section div p img{
+    float: left;
+    padding-right: 5px;
+}
+
+
+div.col p:nth-child(odd){
+    background-color: #E8DC9B;
+    border: 2px solid gray;
+    border-radius: 10px;
+    font-size: 8pt;
+    font-weight: bold;
+    padding: 8px;
+    min-height: 26px;
+}
+
+div.col p:nth-child(even){
+    margin-bottom: 30pt;
+    min-height: 26px;
+}
+
+footer p {
+    
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+}
+footer {
+    clear: both;
+    background-color: #A2B964;
+}
+
+#validator{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    opacity: .5;
+}

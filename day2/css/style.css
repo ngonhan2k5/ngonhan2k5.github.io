@@ -117,7 +117,7 @@ h3:first-child:first-letter {
     overflow: hidden;
     white-space: nowrap;
     border-right: 4px solid green;
-    
+    box-sizing: ;
 }
 
 @keyframes fly-in {
