@@ -5,9 +5,10 @@ const test=(function(oldCons, document){
             oldCons.log.apply(null, arguments);
             document.write("<span style='color:cyan; font-weight:bold'>" + text + "</span> -> <span style='color:green; font-weight:bold'>Passed</span><br>");
         },
-        info: function (text) {
+        info: function (text, fname) {
             oldCons.info.apply(null, arguments);
-            document.write("<hr><h4 style='color:yellow; font-weight:bold'>" + text + "</h4>");
+            document.write("<hr><h4 style='color:yellow; font-weight:bold'>" + text + "&nbsp;&nbsp;&nbsp; \
+                <button data='"+fname+"' onclick='test.showCode(this)'>Show code</button></h4>");
         },
         warn: function (text) {
             oldCons.warn.apply(null, arguments);
@@ -32,6 +33,18 @@ const test=(function(oldCons, document){
             }else{
                 this.error((okMsg).format(args)+ " (actually " + expression + ")");
             }
+            
+        },
+        showCode: function(that){
+            let code = ''
+            console.log(that.getAttribute('data'))
+            let lst = that.getAttribute('data').split("+")
+            for(let i=0; i< lst.length; i++){
+                let item = lst[i];
+                code += eval(item).toString().replace("function", "function "+ item.split('.')[1])+'\r\n';
+            }
+            
+            alert(code.toString());
             
         }
         
