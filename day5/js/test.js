@@ -1,13 +1,13 @@
 // define a new console
-const test=(function(oldCons){
+const test=(function(oldCons, document){
     return {
         log: function(text){
             oldCons.log.apply(null, arguments);
-            document.write("<span>" + text + "</span> -> <span style='color:green; font-weight:bold'>Passed</span><br>");
+            document.write("<span style='color:cyan; font-weight:bold'>" + text + "</span> -> <span style='color:green; font-weight:bold'>Passed</span><br>");
         },
         info: function (text) {
             oldCons.info.apply(null, arguments);
-            document.write("<hr><h4>" + text + "</h4>");
+            document.write("<hr><h4 style='color:yellow; font-weight:bold'>" + text + "</h4>");
         },
         warn: function (text) {
             oldCons.warn.apply(null, arguments);
@@ -15,7 +15,7 @@ const test=(function(oldCons){
         },
         error: function (text) {
             oldCons.error.apply(null, arguments);
-            document.write("<span>" + text + "</span> -> <span style='color:red; font-weight:bold'>Failed</span><br>");
+            document.write("<span style='color:cyan; font-weight:bold'>" + text + "</span> -> <span style='color:red; font-weight:bold'>Failed</span><br>");
             
         },
         assert: function(expression, okMsg, expected){
@@ -36,7 +36,7 @@ const test=(function(oldCons){
         }
         
     };
-}(window.console));
+}(window.console, document));
 
 // string format
 if (!String.prototype.format) {
