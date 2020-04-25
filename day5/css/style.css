@@ -129,6 +129,8 @@ span#clock {
 
 h1 {
     display: inline-block;
+    max-width: 100%;
+    /* font-size: 9vw; */
 }
 
 @keyframes fly-in {
