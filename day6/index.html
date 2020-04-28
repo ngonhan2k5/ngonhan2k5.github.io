@@ -17,34 +17,50 @@
 	</head>
 
 	<body>
-		<h1>Text Decorator</h1>
-		
-		<div>
-			<img src="img/decorated.gif" alt="very decorated!" />
-		</div>
+		<article>
+			<h1>Text Decorator</h1>
+			
+			<div>
+				<img src="img/decorated.gif" alt="very decorated!" />
+			</div>
 
-		<!-- Your UI controls go here -->
-		<fieldset>
-			<legend>Text:</legend>
-			<textarea id="message" name="message" rows="4" cols="30">
-	      Sample Item 1
-	      Sample Item 2
-			</textarea>
-		</fieldset>
-		<fieldset>
-			<legend>Decoration</legend>
-			<label for="type">Bigger Type</label>
-			<select name="type" id="type">
-				<option value="fixed">24pt</option>
-				<option value="inc">Increase by 2pt</option>
-				<option value="timer">Timer increase by 2pt</option>
-			</select>
-			<button name="bigger" id="bigger">Bigger Decorations!</button>
-			<br><br>
-			<input type="checkbox" id="bling" /> <label for="bling">Bling</label>
-			<br><br>
-			<button name="igpay_atinlay" id="igpay_atinlay">Igpay Atinlay!</button>
-			<button name="malkovitch" id="malkovitch">Malkovitch</button>
-		</fieldset>
+			<!-- Your UI controls go here -->
+			<fieldset>
+				<legend>Text:</legend>
+				<textarea id="message" name="message" rows="4" cols="30">
+		Sample Item 1
+		Sample Item 2
+				</textarea>
+			</fieldset>
+			<!-- Decoration controls -->
+			<fieldset>
+				<legend>Decoration</legend>
+				<label for="type">Bigger Type</label>
+				<select name="type" id="type">
+					<option value="fixed">24pt</option>
+					<option value="inc">Increase by 2pt</option>
+					<option value="timer">Timer increase by 2pt</option>
+				</select>
+				<button name="bigger" id="bigger">Bigger Decorations!</button>
+				<br><br>
+				<input type="checkbox" id="bling" /> <label for="bling">Bling</label>
+				<br><br>
+				<button name="igpay_atinlay" id="igpay_atinlay">Igpay Atinlay!</button>
+				<button name="malkovitch" id="malkovitch">Malkovitch</button>
+			</fieldset>
+		</article>
+		<footer>
+            <span>Copyright © 2020 by Ngonhan.</span>
+            <!-- w3c html validation -->
+            
+                <a target="_blank" href="https://validator.w3.org/check/referer"><img
+                    src="../img/w3c-html.png"
+                    alt="html validator"/></a>
+                <a target="_blank" href="https://jigsaw.w3.org/css-validator/check/referer"><img
+                    src="../img/w3c-css.png"
+                    alt="css validator"/></a>
+                
+            
+        </footer>
 	</body>
 </html>
