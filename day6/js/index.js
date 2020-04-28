@@ -79,23 +79,24 @@ window.onload = function(){
     doc.byId('igpay_atinlay').onclick = function(){
         let text = msgElement.value;
         // line by line
-        text = text.split('\n').
-        map(line=>{
+        text = text.split('\n')
+        .map(line=>{
             // word by word
-            return line.split(' ').map(
-                word=>{
-                    // by pass empty ones
-                    // if (/ +/.test(word)||word==""||word=="\n") 
-                    if (word.trim()!=word || word == "")
-                        return word;
+            return line.split(' ')
+                // process each word
+                .map(word=>{
+                        // by pass empty ones
+                        // if (/ +/.test(word)||word==""||word=="\n") 
+                        if (word.trim()!=word || word == "")
+                            return word;
 
                         // find consonant
-                    let i = 0;
-                    while('aeiuoAEIUO'.indexOf(word[i]) > 0)
-                        i++;
-    
-                    return word.substring(i) + word.substring(0,i) + '-ay';
-                }
+                        let i = 0;
+                        while('aeiuoAEIUO'.indexOf(word[i]) > 0)
+                            i++;
+                        // move consonats to backward
+                        return word.substring(i) + word.substring(0,i) + '-ay';
+                    }
             ).join(' ');
         })
         .join('\n');
@@ -103,8 +104,11 @@ window.onload = function(){
     };
     doc.byId('malkovitch').onclick = function(){
         let text = msgElement.value;
+        // process word using split then map
+        text = text.split(' ')
+                .map(word=>word.length>=5?'Malkovich':word)
+                .join(' ');
 
-        text = text.split(' ').map(word=>word.length>=5?'Malkovich':word).join(' ');
         msgElement.value = text;
     };
     
