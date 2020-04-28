@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Text Decorator</title>
+		<link href="css/decoratemytext.css" type="text/css" rel="stylesheet" />
+
+		<!--
+		This is a widely-used JavaScript library named jQuery that has
+		many useful functions which we need.
+		Please don't remove this link or change its URL; leave it as-is!
+		-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+		<!-- link to your script file here -->
+		<script src="js/index.js"></script>
+	</head>
+
+	<body>
+		<h1>Text Decorator</h1>
+		
+		<div>
+			<img src="img/decorated.gif" alt="very decorated!" />
+		</div>
+
+		<!-- Your UI controls go here -->
+		<fieldset>
+			<legend>Text:</legend>
+			<textarea id="message" name="message" rows="4" cols="30">
+	      Sample Item 1
+	      Sample Item 2
+			</textarea>
+		</fieldset>
+		<fieldset>
+			<legend>Decoration</legend>
+			<select name="type" id="type">
+				<option value="fixed">24pt</option>
+				<option value="inc">Increase by 2pt</option>
+				<option value="timer">Timer increase by 2pt</option>
+			</select>
+			<button name="bigger" id="bigger">Bigger Decorations!</button>
+			<br>
+			<input type="checkbox" id="bling" /> <label for="bling">Bling</label>
+			<br>
+			<button name="igpay_atinlay" id="igpay_atinlay">Igpay Atinlay!</button>
+			<button name="malkovitch" id="malkovitch">Malkovitch</button>
+		</fieldset>
+	</body>
+</html>
