@@ -35,7 +35,7 @@ window.onload = function(){
     })(document, window);
 
     let msgElement = doc.byId('message');
-
+    let intervalHandle = null;
     // put all of your code here
     let alertHello = function(type){
 
@@ -44,6 +44,8 @@ window.onload = function(){
             fontSize = (fontSize==""?12:parseInt(fontSize,10)) + 2 + 'pt';
             msgElement.style.fontSize = fontSize;
         };
+
+        clearInterval(intervalHandle);
         
         switch (type){
             case 'fixed':
@@ -56,7 +58,7 @@ window.onload = function(){
                 incFontSize();
                 break;
             case "timer":
-                setInterval(incFontSize, 500);
+                intervalHandle = setInterval(incFontSize, 500);
                 break;
             default:
                 alert('Hello');
