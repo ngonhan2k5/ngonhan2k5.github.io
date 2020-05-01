@@ -1,0 +1,14 @@
+section#login, section#product {
+    margin: 50px;
+}
+
+/* .form-row>.col, .form-row>[class*=col-] {
+    padding-left: 15px;
+    padding-right: 15px;
+} */
+
+
+body {
+    width: 90%;
+    margin: auto;
+}
