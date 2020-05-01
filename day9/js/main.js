@@ -16,7 +16,7 @@
     john.dateOfBirth = new Date("10/10/1998");
     john.print = function(){
         console.log(`The person’s name is ${this.name}`);
-        console.log(`John was born on ${this.dateOfBirth.getFullYear()}-${this.dateOfBirth.getMonth()}-${this.dateOfBirth.getDate()}`);
+        console.log(`John was born on ${this.dateOfBirth.getFullYear()}-${this.dateOfBirth.getMonth()+1}-${this.dateOfBirth.getDate()}`);
     };
 
     john.print();
@@ -41,13 +41,18 @@
     anna.doJob('Programmer');
 
     //Q3
-    function Person(){
-
+    function Person(name, dob){
+        this.name = name;
+        this.dateOfBirth = dob;
     }
 
     Person.prototype.toString = function(){
-        return `{Name: ${this.name}, DateOfBirth: ${this.dateOfBirth.getFullYear()}-${this.dateOfBirth.getMonth()}-${this.dateOfBirth.getDate()}}`
+        return `{Name: ${this.name}, DateOfBirth: ${this.dateOfBirth.getFullYear()}-${this.dateOfBirth.getMonth()+1}-${this.dateOfBirth.getDate()}}`;
     };
+
+    const peter = new Person('Peter', new Date("11/10/1985"));
+    console.log(peter.toString());
+    console.log(peter);
 
     // class Person {
         
