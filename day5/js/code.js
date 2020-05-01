@@ -132,8 +132,8 @@ function testAll(){
     test.assert(lab5.maxOfThree(4,3,1), 'The max of 4, 3 and 1 is {0}', 3);
     // Q3
     test.info('Q3', 'lab5.isVowel');
-    test.assert(lab5.isVowel('a'), 'a is a vowel', true)
-    test.assert(lab5.isVowel('f'), 'f is a vowel', true)
+    test.assert(lab5.isVowel('a'), 'a is a vowel', true);
+    test.assert(lab5.isVowel('f'), 'f is a vowel', true);
     // Q4
     test.info('Q4', 'lab5.sum+lab5.multiply');
     test.assert(lab5.sum([1,2,3,4,5]) , 'sum of [1,2,3,4,5] is {0}', 15);

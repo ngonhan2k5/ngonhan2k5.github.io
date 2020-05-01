@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 // Q6
 
-(function () {
+// (function () {
     "use strict";
     var count = (function () {
         var counter = 0;
@@ -30,7 +30,7 @@
     add7(); add7(); add7();
 
     // Q10
-    const Employee = (function () {
+    const Employee = ( () => {
         let name, age, salary;
 
         const getAge = function () {
@@ -49,20 +49,23 @@
                 return age = newAge;
             },
             setSalary: function (newSalary) {
+                this.increaseAge();
                 return salary = newSalary;
             },
             setName: function (newName) {
                 return name = newname;
             },
-            increaseSalary(percentage) {
+            increaseSalary: (percentage) => {
+                
                 return this.setSalary(getSalary() * (1 + percentage / 100));
             },
-            increaseAge() {
+            increaseAge: function () {
+                console.log(11);
                 return this.setAge(getAge() + 1);
             }
 
         };
-    }());
+    })();
 
     // Q11
     Employee.address = '1030 Main St';
@@ -74,4 +77,4 @@
 
     console.log(Employee.address);
 
-}())
+// }())
