@@ -164,8 +164,15 @@
             return false;
         })
 
-        $('#product button[type="submit"]').on('click', function(){
-            $('#product form').append('<div>AAA</div>');
+        $('#product form').on('submit', function(){
+
+            $('#product').append('<div id="output"></div>');
+            let $inputs = $(this).find(':input');
+            $inputs.each(function() {
+                $('#output').append('<div >'+ $(this).val() + '</div>');
+            });
+            
+            return false;
         })
 
     </script>
