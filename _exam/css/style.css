@@ -1,0 +1,18 @@
+.navbar.bg-primary, .btn-primary {
+    background-image: none;
+    background-color: rgb(255, 123, 0) !important;
+}
+
+div.banner{
+    height: 150px; 
+    background: url('../img/hcmc-photo2.jpg') repeat;
+    background-size: contain;
+}
+
+a.tel{
+    text-decoration: underline;
+}
+
+#divCitizensList {
+    clear: both;
+}

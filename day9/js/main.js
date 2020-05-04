@@ -6,17 +6,19 @@
         name: '',
         dateOfBirth: '',
         getName: function (){ return this.name; },
-        setName: function (name){ this.name = name; }
+        setName: function (name){ this.name = name; },
+        setDateOfBirth: function (date){ this.dateOfBirth = date; }
     };
 
     console.log(111, person);
 
     const john = Object.create(person);
-    john.name = 'John';
-    john.dateOfBirth = new Date("10/10/1998");
+    john.setName('John');
+    john.setDateOfBirth(new Date("12/10/1998"));
     john.print = function(){
         console.log(`The person’s name is ${this.name}`);
-        console.log(`John was born on ${this.dateOfBirth.getFullYear()}-${this.dateOfBirth.getMonth()+1}-${this.dateOfBirth.getDate()}`);
+        //console.log(`John was born on ${this.dateOfBirth.getFullYear()}-${this.dateOfBirth.getMonth()+1}-${this.dateOfBirth.getDate()}`);
+        console.log(`John was born on ${Intl.DateTimeFormat().format(this.dateOfBirth)}`);
     };
 
     john.print();
@@ -44,14 +46,17 @@
     function Person(name, dob){
         this.name = name;
         this.dateOfBirth = dob;
+        this.toString = function(){
+            return `{Name: ${this.name}, DateOfBirth: ${this.dateOfBirth.getFullYear()}-${this.dateOfBirth.getMonth()+1}-${this.dateOfBirth.getDate()}}`;
+        };
     }
 
-    Person.prototype.toString = function(){
-        return `{Name: ${this.name}, DateOfBirth: ${this.dateOfBirth.getFullYear()}-${this.dateOfBirth.getMonth()+1}-${this.dateOfBirth.getDate()}}`;
-    };
+    // Person.prototype.toString = function(){
+    //     return `{Name: ${this.name}, DateOfBirth: ${this.dateOfBirth.getFullYear()}-${this.dateOfBirth.getMonth()+1}-${this.dateOfBirth.getDate()}}`;
+    // };
 
     const peter = new Person('Peter', new Date("11/10/1985"));
-    console.log(peter.toString());
+    console.log(111,peter.toString());
     console.log(peter);
 
     // class Person {
