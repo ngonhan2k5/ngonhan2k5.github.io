@@ -1,0 +1,13 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "sync",
+            "type": "shell",
+            "command": "xcopy day10\\wap\\src\\main\\webapp C:\\Users\\USER\\AppData\\Roaming\\Code\\User\\workspaceStorage\\130db431284988a65f0611b4cecf00a0\\adashen.vscode-tomcat\\tomcat\\tomcat\\webapps\\wap /K /D /H /E /Y",
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        }
+    ]
+}

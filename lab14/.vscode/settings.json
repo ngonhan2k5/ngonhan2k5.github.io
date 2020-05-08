@@ -1,0 +1,44 @@
+{
+    "deploy": {
+        "packages": [
+            {
+                "name": "Version 2.3.4",
+                "description": "Package version 2.3.4",
+                "files": [
+                    "/target/lab14-v1/**"
+                ],
+                "exclude": [
+                    "*.war"
+                ],
+                "deployOnSave": true,
+                
+                "button": {
+                    "text": "Deploy to 'Tomcat-VS'",
+                    "tooltip": "Click here to deploy to the target...",
+
+                    "targets": [ "Tomcat" ]
+                }
+            }
+        ],
+        "targets": [
+            {
+                "type": "local",
+                "name": "Tomcat",
+                "description": "A local folder",
+                "dir1": "../../tomcat/webapps",
+                "dir": "C:/Users/USER/AppData/Roaming/Code/User/workspaceStorage/130db431284988a65f0611b4cecf00a0/adashen.vscode-tomcat/tomcat/tomcat/webapps",
+                "mappings": [
+                    {
+                        "source": "/target/",
+                        "target": "/"
+                    }
+                ]
+            }
+        ]
+    },
+
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.project.referencedLibraries": [
+        "../../tomcat/lib/*.jar"
+    ]
+}
