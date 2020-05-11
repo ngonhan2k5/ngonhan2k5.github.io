@@ -13,6 +13,7 @@
             // event attachement
             let self = this;
             $("body").on('click', ".nav-link, #addbook", function(){
+                
                 self.load($(this).attr('href'));
             });
 
@@ -31,7 +32,9 @@
                 console.log('result', result);
                 actions.do(_action);
             });
-          
+            // bold
+            $(".nav-link").removeClass(['font-weight-bold','text-warning']);
+            $(".nav-link[href='"+ (action=='#add'?'#book':action)  + "']").addClass(['font-weight-bold','text-warning']);
         },
         // when back history
         back: function(event){
