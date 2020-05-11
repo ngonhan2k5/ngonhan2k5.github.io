@@ -1,0 +1,33 @@
+<body>
+    <div id="container">
+        <div class="row" style="padding-bottom:1em;">
+            <div class="col-md-8">
+                <span style="font-size: 2em; color: #32a5e7;">Books in our Collection</span>
+            </div>
+                 
+            <div class="col-md-4">
+                <span style="float:right;">
+                    <a id="addbook" class="btn btn-outline-success btn-lg" href="#add">Add New Book</a>
+                </span>
+            </div>
+        </div>
+        <!-- <p>&nbsp;</p> -->
+        <div id="divBooksList" style="font-size: 1em">
+            <table id="booksTable" class="table table-striped">
+                <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">ISBN</th>
+                <th scope="col">Book Title</th>
+                <th scope="col">Overdue Fee</th>
+                <th scope="col">Publisher</th>
+                <th scope="col">Date Published</th>
+                </tr>
+                </thead>
+                <tbody id="tbody">
+                <tr><td style="text-align:center;" colspan="8">Loading...<br/>Please wait</td></tr>
+                </tbody>
+            </table>
+        </div>    
+    </div>
+</body>
