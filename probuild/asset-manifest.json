@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.38553289.chunk.css",
+    "main.js": "/static/js/main.eb5a0ee3.chunk.js",
+    "main.js.map": "/static/js/main.eb5a0ee3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.511a8101.js",
+    "runtime-main.js.map": "/static/js/runtime-main.511a8101.js.map",
+    "static/css/2.2873b3d5.chunk.css": "/static/css/2.2873b3d5.chunk.css",
+    "static/js/2.afc352ca.chunk.js": "/static/js/2.afc352ca.chunk.js",
+    "static/js/2.afc352ca.chunk.js.map": "/static/js/2.afc352ca.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.f00a110c6a2e0aea884a33111844907a.js": "/precache-manifest.f00a110c6a2e0aea884a33111844907a.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.2873b3d5.chunk.css.map": "/static/css/2.2873b3d5.chunk.css.map",
+    "static/css/main.38553289.chunk.css.map": "/static/css/main.38553289.chunk.css.map",
+    "static/js/2.afc352ca.chunk.js.LICENSE.txt": "/static/js/2.afc352ca.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/static/media/overdue-icon.d35dfdc1.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.511a8101.js",
+    "static/css/2.2873b3d5.chunk.css",
+    "static/js/2.afc352ca.chunk.js",
+    "static/css/main.38553289.chunk.css",
+    "static/js/main.eb5a0ee3.chunk.js"
+  ]
+}
